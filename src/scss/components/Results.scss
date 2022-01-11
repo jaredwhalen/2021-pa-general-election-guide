@@ -1,0 +1,28 @@
+@import '../newsjournal-styles/values.scss';
+
+.g-toggleWrapper {
+  display: flex;
+  border-bottom: 3px solid #ddd;
+  .g-toggleButton {
+    font-size: 18px;
+    padding: 10px;
+    &.active {
+      background-color: #ddd;
+    }
+  }
+}
+
+
+.results-section {
+  border-bottom: 1px solid nth($grays, 7);
+
+  &:first-of-type {
+    h3 {
+      margin-top: 0px;
+    }
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}

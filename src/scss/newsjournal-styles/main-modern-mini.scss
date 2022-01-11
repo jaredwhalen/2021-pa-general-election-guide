@@ -1,0 +1,142 @@
+.inline-share-tools {
+  margin: 10px 0 15px 0px;
+  white-space: nowrap;
+}
+
+.asset-inline-share-tools-bottom {
+  padding-top: 10px;
+}
+
+.inline-share-tools-label {
+  display: inline-block;
+  font: 400 11px/28px 'Unify Sans Bold',Arial,sans-serif;
+  height: 28px;
+  background: #e0e0e0;
+  box-shadow: inset -2px 0 4px -1px rgba(0,0,0,.1);
+  margin: 0;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  top: 1px;
+  vertical-align: top;
+}
+
+.inline-share-btn {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-right: 1px solid #d6d6d6;
+  cursor: pointer;
+  display: inline-block;
+  height: 28px;
+  outline: 0;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  &.inline-share-btn-email {
+    border-right: none;
+  }
+}
+
+.inline-share-btn-more {
+  border: 0;
+}
+
+.inline-share-count {
+  font: 400 12px/18px 'Unify Sans Bold',arial,sans-serif;
+  color: #000;
+  display: block;
+  white-space: nowrap;
+}
+
+.inline-share-count-facebook:before {
+  background-position: -284px -65px;
+  height: 14px;
+  width: 8px;
+}
+
+.inline-share-count-twitter:before {
+  background-position: -11px -35px;
+  height: 15px;
+  width: 19px;
+}
+
+.inline-share-count-linkedin:before {
+  background-position: -68px -60px;
+  height: 15px;
+  width: 19px;
+}
+
+.inline-share-count-comments:before {
+  background-position: -190px -34px;
+  height: 17px;
+  width: 17px;
+}
+
+.inline-share-count-email:before {
+  background-position: -251px -64px;
+  margin: 0;
+  height: 15px;
+  width: 15px;
+}
+
+.inline-share-count-more:before {
+  background-position: -101px -9px;
+  height: 12px;
+  top: -1px;
+  width: 15px;
+}
+
+.inline-share-btn-label {
+  font: 700 8px/12px arial,sans-serif;
+  color: #999;
+  display: block;
+  text-transform: uppercase;
+  position: relative;
+  top: 1px;
+  -webkit-transition: color 0.1s;
+  -moz-transition: color 0.1s;
+  -ms-transition: color 0.1s;
+  -o-transition: color 0.1s;
+  transition: color 0.1s;
+}
+
+.inline-share-btn:hover > .inline-share-btn-label {
+  color: #000;
+}
+
+.inline-share-btn-facebook:hover > .inline-share-btn-label {
+  color: #4862a7;
+}
+
+.inline-share-btn-twitter:hover > .inline-share-btn-label {
+  color: #1bb2df;
+}
+
+.inline-share-btn-linkedin:hover > .inline-share-btn-label {
+  color: #4875b4;
+}
+
+.prsstm {
+  display: table;
+  margin: 0;
+  padding: 27px 0 10px;
+  position: relative;
+}
+
+.prsstm-item-wrap {
+  display: table-cell;
+}
+
+.prsstm-item {
+  display: block;
+  text-align: center;
+}
+
+.prsstm-img {
+  border: 5px solid #FFF;
+  box-shadow: 0 4px 8px 0 #BEBEBE;
+  width: 120px;
+  height: 120px;
+}

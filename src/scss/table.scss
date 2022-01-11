@@ -1,0 +1,29 @@
+@import './newsjournal-styles/values.scss';
+
+table.sponsored {
+  text-align: left;
+  font-size: 14px;
+    border-collapse: collapse;
+}
+
+table.sponsored th {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #222;
+  font-weight: 700;
+  border-bottom: 2px solid #222;
+  padding: 12.5px 10px;
+}
+
+table.sponsored tr {
+  border-bottom: .5px solid #d7d7d7;
+}
+
+// table.sponsored tr:hover td {
+//   background-color: #DFEBF1;
+// }
+
+table.sponsored td {
+  text-transform: capitalize;
+  padding: 12.5px 10px;
+}

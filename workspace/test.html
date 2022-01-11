@@ -1,0 +1,42 @@
+<in-depth-nav></in-depth-nav>
+<section class='generic-content-container'></section>
+<div id='footerContainer'></div>
+
+
+<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+
+<script>
+
+  setTimeout(function() {
+
+    const mainContainer = document.querySelector('section.generic-content-container');
+    const header = document.querySelector('in-depth-nav');
+
+    mainContainer.innerHTML = `<div id='g-target'></div>`
+
+    mainContainer.prepend(header)
+
+    var pymParent = pym.Parent('g-target', 'https://jaredwhalen.github.io/sandbox/', {});
+    // var pymParent = pym.Parent('g-target', '../build/index.html', {});
+
+
+    document.getElementById('footerContainer').style.display = 'none'
+
+    function reportWindowSize() {
+      let targetIframe = document.querySelector('#g-target').querySelector("iframe")
+      targetIframe.style.height = window.innerHeight + 'px'
+      targetIframe.style.width = '100%'
+      targetIframe.scrolling = 'yes'
+    }
+
+    reportWindowSize()
+    window.addEventListener('resize', reportWindowSize);
+
+    window.addEventListener('load', (e) => {
+      pymParent.sendMessage('loaded', window.location.href)
+    });
+
+
+  }, 100);
+
+</script>

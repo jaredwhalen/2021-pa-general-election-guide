@@ -1,0 +1,41 @@
+@import '../newsjournal-styles/values.scss';
+
+.CTA {
+  margin: 15px 0px 0px;
+    padding: 15px;
+    // border-radius: 5px;
+    background-color: rgba(nth($blues, 7), 0.5);
+    p {
+      margin: 5px 0;
+    }
+
+    h4 {
+      margin: 0px 0px 5px;
+    }
+
+    a {
+      color: nth($blues, 5);
+      text-decoration: none;
+    }
+    @include tablet {
+      margin: 15px 0px 0px;
+      // display: none;
+    }
+}
+
+.profile {
+  @include tablet {
+    .CTA {
+      display: none;
+    }
+  }
+}
+
+
+.results {
+  @include tablet {
+    .CTA {
+      margin: 0px 0px 15px;
+    }
+  }
+}

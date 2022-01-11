@@ -1,0 +1,570 @@
+@import './newsjournal-styles/values.scss';
+
+.topBackground {
+  background-color: rgba(#000, 0.6);
+  height: 600px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include tablet {
+    height: auto;
+    background-color: rgba(#000, 0);
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .topBackgroundImage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: -1;
+    background-color: #222;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @include tablet {
+      height: 300px;
+      position: relative;
+    }
+    @include mobile {
+      height: 200px;
+    }
+  }
+}
+
+
+
+.g-search-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .g-SearchBar {
+    flex: 1 1;
+
+    &#g-search_city,
+    &#g-search_street {
+      margin-right: 10px;
+    }
+
+    &#g-search_zip {
+      flex: 0 1 75px;
+    }
+    @include mobile {
+      &#g-search_street {
+        flex-basis: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      &#g-search_city,
+      &#g-search_zip {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      &#g-search_city {
+        flex: 0 1 calc(70% - 25px);
+      }
+
+      &#g-search_zip {
+        flex: 0 1 calc(30% - 25px);
+      }
+    }
+  }
+
+  .g-searchButton {
+    flex: 0 1 150px;
+    margin-left: 10px;
+    background-color: nth($blues, 5);
+    color: white;
+    opacity: 0.75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+    @include mobile {
+      flex: 1 1 100%;
+      padding: 10px;
+      margin-left: 0;
+    }
+  }
+
+  .optionsContainer {
+    flex-basis: 100%;
+
+
+
+    .optionWrapper {
+      background-color: rgba(nth($blues, 5), 0.125);
+      display: inline-block;
+      padding: 5px 10px;
+      margin-right: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 5px;
+      @include mobile {
+        text-align: center;
+        display: block;
+      }
+      .optionDiv {
+        font-weight: 500;
+        color: #888888;
+        text-transform: capitalize;
+        margin-left: 10px;
+        display: inline-block;
+
+        @include mobile {
+          margin-left: 0px;
+        }
+
+      }
+
+      &:hover {
+        background-color: rgba(nth($blues, 5), 0.25);
+      }
+    }
+  }
+}
+
+.g-SearchBar {
+  // border: none;
+  // border-bottom: 1px solid #d7d7d7;
+  // font-size: 26px;
+  // line-height: 2.4rem;
+  // margin-bottom: 0;
+  width: calc(100% - 40px);
+  outline: none;
+  // width: 100%;
+  background: #f7f7f7;
+  @include box-shadow(inset 0 2px 2px 0 rgba(34,34,34,.1));
+  border-radius: 3px;
+  border: none;
+  font-size: 18px;
+  color: #3b3b3b;
+  text-align: left;
+  padding: 20px;
+  @include tablet {
+    font-size: 18px;
+    padding: 10px;
+  }
+}
+
+#lawmaker-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+  a {
+    flex-basis: 33.3%;
+    .g-card {
+      .image {
+        width: 60px;
+        height: 60px;
+        background-color: #ddd;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .circle {
+        font-size: 14px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.g-card, .Profile {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  @extend .padding-top-3;
+  @extend .padding-bottom-3;
+  @include tablet {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .image {
+    width: 150px;
+    height: 150px;
+    background-color: #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .text-box {
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
+    // justify-content: flex-start;
+    padding-left: 15px;
+
+    .name {
+      display: flex;
+      flex-wrap: nowrap;
+      @extend .padding-bottom-1;
+
+      .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5px;
+        background-color: #D7D7D7;
+        font-size: 18px;
+        color: white;
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+
+        // div {
+        //   margin: 2px -2px 0 0;
+        // }
+
+        &.republican {
+          background-color: #CD2D37;
+        }
+
+        &.democrat {
+          background-color: #1665CF;
+        }
+      }
+    }
+
+    .district {
+      // font-weight: 300;
+      font-size: 18px;
+      color: #888888;
+      text-transform: capitalize;
+    }
+
+    .disclosureLink {
+      // font-weight: 300;
+      // font-size: 16px;
+      color: #888888;
+      padding-top: 10px;
+
+      a {
+        text-decoration: none;
+        color: nth($blues, 5);
+      }
+    }
+  }
+
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.SectionContainer {
+  width: 100%;
+
+  .Section {
+    width: 100%;
+
+    .Subsection {
+      .Disclosure {
+        margin-bottom: 15px;
+
+        .Row {
+          border-bottom: 0.5px solid #D7D7D7;
+
+          &:last-of-type {
+            // border: none;
+          }
+        }
+
+        .Row,
+        .h-row {
+          display: flex;
+          justify-content: space-between;
+          text-align: left;
+
+          .Cell,
+          .h-cell {
+            width: 100%;
+            // border: 0.5px solid #D7D7D7;
+            padding: 12.5px 10px;
+            // border-bottom: none;
+            // border-right: none;
+            font-family: $dnj-sans;
+          }
+        }
+
+        .h-row {
+          font-family: UnifySans-SemiBold;
+          font-size: 18px;
+          text-transform: capitalize;
+          color: #222222;
+          font-weight: bold;
+          border-bottom: 2px solid #222;
+          background-color: #FFFFFF;
+          // position: sticky;
+          // top:40px;
+        }
+
+        .n-row {
+          justify-content: flex-start;
+          align-items: center;
+          // border-top: 0.5px solid #D7D7D7;
+          // border-left: 0.5px solid #D7D7D7;
+          padding: 10px;
+          background-color: rgba(nth($yellows, 7), 0.6);
+          border-bottom: none;
+
+          .image {
+            width: 60px;
+            height: 60px;
+            background-color: #ddd;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .name {
+            font-weight: 700;
+            font-size: 16px;
+            display: flex;
+            flex-wrap: nowrap;
+            padding-right: 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+              color: nth($blues, 5);
+              font-weight: 800;
+            }
+
+            .circle {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-left: 10px;
+              background-color: #D7D7D7;
+              font-size: 12px;
+              color: white;
+              border-radius: 50%;
+              width: 20px;
+              height: 20px;
+
+              div {
+                text-align: center;
+              }
+
+              &.republican {
+                background-color: #CD2D37;
+              }
+
+              &.democrat {
+                background-color: #1665CF;
+              }
+            }
+          }
+
+          .district {
+            font-weight: 300;
+            font-size: 16px;
+            color: #888888;
+            text-transform: capitalize;
+          }
+        }
+
+        .Row,
+        .h-row {
+          // border-right: 0.5px solid #D7D7D7;
+        }
+
+        .Row:last-of-type {
+          // border-bottom: 0.5px solid #D7D7D7;
+        }
+
+        &.first {
+          margin-bottom: 0;
+
+          .Row:last-of-type {
+            border-bottom: none;
+          }
+
+          &:last-of-type {
+            // border-bottom: 0.5px solid #D7D7D7;
+          }
+
+          .h-row {
+            display: none;
+          }
+
+          &:nth-of-type(2) {
+            .h-row {
+              display: flex;
+            }
+          }
+
+          &:last-of-type {
+            border-bottom: 0.5px solid #D7D7D7;
+          }
+        }
+      }
+    }
+  }
+
+  .sectionText {
+    font-family: $dnj-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    font-style: italic;
+    color: #888888;
+    border-left: 2.5px solid nth($yellows, 6);
+    padding-left: 15px;
+    margin: 15px 0;
+    display: none;
+  }
+
+  .subsectionText {
+    font-size: 14px;
+    color:#888;
+    line-height: 1.4;
+    // background-color: #eee;
+    // padding: 5px 10px;
+    // border-radius: 6px;
+    @extend .padding-bottom-1;
+  }
+
+  .g-none {
+    // font-weight: bold;
+    // margin-left: 10px;
+    // @extend .padding-top-1;
+  }
+}
+
+#ga-options {
+  display: none;
+}
+
+.Index {
+  background: #fff;
+  // box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+  border-radius: 3px;
+
+  .wrapper {
+    display: flex;
+
+    .IndexSection {
+      h3 {
+        text-decoration: none;
+        margin: 0;
+        cursor: pointer;
+        color: #888888;
+
+        &:hover {
+          color: #222;
+        }
+      }
+      flex-basis: 33%;
+      font-family: $dnj-sans;
+      font-weight: 700;
+      color: #222;
+      letter-spacing: 0;
+      // text-align: center;
+      padding: 10px;
+      // background: #f7f7f7;
+      border-right: 0.5px solid #D7D7D7;
+      // border-radius: 3px 3px 0 0;
+      &:last-of-type {
+        border-right: none;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 15px 20px 5px;
+        margin: 0;
+        font-family: $dnj-sans;
+
+        li {
+          text-decoration: none;
+          margin-bottom: 10px;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-align-items: center;
+          align-items: center;
+          color: #888888;
+          font-weight: 400;
+          cursor: pointer;
+
+          &:hover {
+            color: #222;
+          }
+
+          &:before {
+            content: "\F111";
+            font-family: FontAwesome;
+            font-size: 7px;
+            color: nth($yellows, 6);
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Note {
+  background-color: #eee;
+  padding: 5px 15px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.ammendment,
+.ammendment_example {
+  font-size: 25px;
+  color: nth($yellows, 5);
+}
+
+.ammendment {
+  padding-top: 3px;
+  position: absolute;
+}
+
+.ammendment_example {
+  vertical-align: text-top;
+  padding: 0px 2px;
+}
+
+
+
+
+h3.Error {
+  margin: 5px 0 10px;
+  @extend .instructions;
+}

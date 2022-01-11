@@ -1,0 +1,179 @@
+@import './scss/newsjournal-styles/values.scss';
+
+.App {
+  h2 {
+    margin: 0px;
+  }
+
+  h3 {
+    margin: 15px 0px 5px;
+  }
+
+  p {
+      // font-weight: 300;
+      line-height: 24px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      font-family: $dnj-sans;
+      color: #222222;
+  }
+
+}
+
+.section-wrapper {
+  margin: 0px 10px 30px;
+}
+
+.w-medium, .w-small {
+  width: 100%;
+}
+
+.w-medium {
+  max-width: 1100px;
+}
+
+
+
+.flex-container {
+  display: flex;
+  @extend .padding-top-2;
+
+  @include tablet {
+    &.profile, &.results {
+      flex-wrap: wrap;
+    }
+    &.race, &.showAll {
+      flex-wrap: wrap-reverse;
+    }
+
+  }
+
+  .flex-siderail {
+    // width: 200px;
+    flex: 0 0 250px;
+    margin-right: 5px;
+
+    @include tablet {
+      flex-basis: 100%;
+      margin-right: 0px;
+    }
+
+    p {
+      line-height: 1.4;
+      margin: 0px;
+    }
+    img {
+      width: 100%;
+    }
+
+
+  }
+
+  .flex-main {
+    flex: 1 1 100%;
+    margin-left: 15px;
+    @include tablet {
+      flex-basis: 100%;
+      margin-left: 0px;
+    }
+  }
+}
+
+.g-link, .g-link:visited {
+  color: nth($blues, 5);
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+
+  }
+}
+
+
+.g-list {
+  .g-item {
+    margin: 10px 0px;
+  }
+}
+
+span {
+
+  font-weight: bold;
+  // text-transform: capitalize;
+  &.R {
+    color: $republican;
+  }
+  &.D {
+    color: $democratic;
+  }
+  &.G {
+    color: $green;
+  }
+  &.L {
+    color: $libertarian;
+  }
+  &.party {
+      font-weight: bold;
+  }
+}
+
+
+.socialIcons {
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+
+  a {
+    text-decoration: none;
+
+    i {
+      border-radius: 50%;
+      border: 1px solid;
+      padding: 10px;
+      height: 10px;
+      width: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  @include tablet {
+    margin-top: 15px;
+  }
+}
+
+
+.main-head {
+  font-weight:800;
+  font-size: 48px;
+  color: #222222;
+  line-height: 48px;
+  margin-top: 15px;
+  @include tablet {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.instructions {
+  font-weight:600;
+  font-size: 16px;
+  color: #222222;
+}
+
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 9999;
+  height: 41px;
+  overflow: hidden;
+}
+
+
+.section {
+  @extend .padding-top-2;
+  @include tablet {
+    padding-top: 5px;
+  }
+}

@@ -1,0 +1,64 @@
+@import '../newsjournal-styles/values.scss';
+
+.districtMap {
+  height: 250px;
+}
+
+$photoWidth: 40px;
+
+.g-candidateList {
+  display: flex;
+  flex-wrap: wrap;
+  .g-candidate {
+    cursor: pointer;
+    flex: 0 1 calc(50% - 22.5px);
+    background-color: rgba(nth($grays, 7), 0.25);
+    padding: 10px;
+    margin: 0px 5px 5px 0px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(even) {
+      margin: 0px 0px 5px 0px;
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+    }
+
+  .g-candidate-displayName {
+    span {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-left: 5px;
+      &.R {
+        color: $republican;
+      }
+      &.D {
+        color: $democratic;
+      }
+    }
+  }
+
+    .g-candidate-photo {
+      width: $photoWidth;
+      height: $photoWidth;
+      border-radius: $photoWidth;
+      overflow: hidden;
+      margin-right: 10px;
+      // border: 1px solid #999;
+      img {
+        width: $photoWidth;
+        height: $photoWidth;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+
+    .g-candidate-displayName {
+
+    }
+
+  }
+}

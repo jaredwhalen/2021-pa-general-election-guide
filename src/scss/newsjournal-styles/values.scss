@@ -1,0 +1,322 @@
+$dnj-sans: 'Unify Sans Bold',sans-serif;
+$dnj-serif: 'georgia,seri';
+
+$republican: #CD2D37;
+$democratic: #1665CF;
+$green: #508A18;
+$libertarian: #e8c100;
+
+
+
+$blues: (
+  #0A2149,
+  #0E2A73,
+  #0A32A0,
+  #1665CF,
+  #009BFF,
+  #7FBDFF,
+  #B9E1FF
+);
+$reds: (
+  #51010B,
+  #7C0E18,
+  #AA1E23,
+  #CD2D37,
+  #F03C4B,
+  #FB8987,
+  #FAC8C8
+);
+$purples: (
+  #38043A,
+  #500B4E,
+  #691464,
+  #8A32A3,
+  #AA50E6,
+  #CB90F1,
+  #E6CDFA
+);
+$greens: (
+  #012B1A,
+  #01402B,
+  #00553C,
+  #1F8A5C,
+  #3CC37D,
+  #8AD8AD,
+  #C8EBD7
+);
+$oranges: (
+  #932803,
+  #BB3C04,
+  #E65005,
+  #F1751D,
+  #FA9632,
+  #FFBB7C,
+  #FFE1C3
+);
+$teals: (
+  #013535,
+  #01494C,
+  #005F64,
+  #0A9299,
+  #19C8D2,
+  #91DCE3,
+  #BEF9F5
+);
+$yellows: (
+  #AF6402,
+  #D78401,
+  #FFA500,
+  #FFB215,
+  #FFBE23,
+  #FFD47B,
+  #FFEBC3
+);
+$grays: (
+  #141414,
+  #292929,
+  #404040,
+  #626262,
+  #878787,
+  #AFAFAF,
+  #D7D7D7
+);
+
+
+
+
+// $primary_dark: #1C1D31;
+// $primary_light: #D8DDFB;
+// $accent_dark: #21253C;
+
+$primary_dark: #21252b;
+$extra_dark: #1A1D22;
+$secondary_dark: #282c34;
+$accent_dark: #3A3F49;
+
+$primary_light: #bdc0c6;
+
+$accent_light: #e2c08d;
+
+
+
+.chemicals {
+  color: nth($greens, 4);
+  background-color: rgba(nth($greens, 7), 0.3);
+  &.marker {
+    background-color: rgba(nth($greens, 5), 1);
+  }
+}
+
+.petroleum, .petroleum_bulk_terminals {
+   color: nth($oranges, 4);
+   background-color: rgba(nth($oranges, 7), 0.3);
+   &.marker {
+     background-color: rgba(nth($oranges, 5), 1);
+   }
+}
+
+.food {
+  color: nth($reds, 4);
+  background-color: rgba(nth($reds, 7), 0.3);
+  &.marker {
+    background-color: rgba(nth($reds, 5), 1);
+  }
+}
+
+
+.electric_utilities, .electrical_equipment {
+  color: nth($yellows, 4);
+  background-color: rgba(nth($yellows, 7), 0.3);
+  &.marker {
+    background-color: rgba(nth($yellows, 5), 1);
+  }
+}
+
+.plastics_and_rubber {
+  color: nth($blues, 4);
+  background-color: rgba(nth($blues, 7), 0.3);
+  &.marker {
+    background-color: rgba(nth($blues, 5), 1);
+  }
+}
+
+.primary_metals, .fabricated_metals, .metal_mining {
+  color: nth($teals, 4);
+  background-color: rgba(nth($teals, 7), 0.3);
+  &.marker {
+    background-color: rgba(nth($teals, 5), 1);
+  }
+}
+
+.textiles {
+  color: nth($purples, 4);
+  background-color: rgba(nth($purples, 7), 0.3);
+  &.marker {
+    background-color: rgba(nth($purples, 5), 1);
+  }
+}
+
+.other, .miscellaneous_manufacturing, .machinery {
+  color: nth($grays, 4);
+  background-color: rgba(nth($grays, 7), 0.3);
+  &.marker {
+    background-color: rgba(nth($grays, 5), 1);
+  }
+}
+
+
+
+
+%noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+@mixin desktop {
+  @media only screen and (max-width: 1000px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media only screen and (max-width: 720px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+@mixin BS-large {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin BS-medium {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+@mixin BS-small {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+@mixin box-shadow($args...) {
+  -webkit-box-shadow: $args;
+  -moz-box-shadow: $args;
+  box-shadow: $args;
+}
+@mixin display-flex {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+@mixin flex-wrap($flex...) {
+  -webkit-flex-wrap: $flex;
+  -ms-flex-wrap: $flex;
+  flex-wrap: $flex;
+}
+@mixin justify-content($flex...) {
+  -webkit-justify-content: $flex;
+  -ms-flex-pack: $flex;
+  justify-content: $flex;
+}
+@mixin align-content($flex...) {
+  -webkit-align-content: $flex;
+  -ms-flex-line-pack: $flex;
+  align-content: $flex;
+}
+@mixin order($flex...) {
+  -webkit-order: $flex;
+  -ms-flex-order: $flex;
+  order: $flex;
+}
+@mixin flex($flex...) {
+  -webkit-flex: $flex;
+  -ms-flex: $flex;
+  flex: $flex;
+}
+@mixin align-self($flex...) {
+  -webkit-align-self: $flex;
+  -ms-flex-item-align: $flex;
+  align-self: $flex;
+}
+
+
+
+
+.w-full {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.w-large {
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+.w-medium {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.w-small {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.padding-top-1 {
+  padding-top: 5px;
+}
+
+.padding-bottom-1 {
+  padding-bottom: 5px;
+}
+
+
+.padding-top-2 {
+  padding-top: 15px;
+}
+
+.padding-bottom-2 {
+  padding-bottom: 15px;
+}
+
+
+.padding-top-3 {
+  padding-top: 30px;
+}
+
+.padding-bottom-3 {
+  padding-bottom: 30px;
+}
+
+
+.padding-top-4 {
+  padding-top: 45px;
+}
+
+.padding-bottom-4 {
+  padding-bottom: 45px;
+}

@@ -1,0 +1,83 @@
+@import '../newsjournal-styles/values.scss';
+
+
+
+.topBox {
+  margin: 0px 15px !important;
+  flex-grow: 1;
+  // max-width: 900px !important;
+  background-color: white;
+  @include box-shadow(0 3px 6px 0 rgba(0,0,0,.5), 0 10px 20px 0 rgba(0,0,0,.75));
+  border-radius: 3px;
+  @include tablet {
+    padding-bottom: 15px;
+    box-shadow: none;
+  }
+
+  .topBoxWrapper {
+    padding: 15px;
+    @include tablet {
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin: 0;
+      @include tablet {
+        font-size: 30px;
+      }
+    }
+
+
+  }
+  @include tablet {
+    width: calc(100% - 30px);
+  }
+}
+
+#topContainer {
+  min-height: 100vh;
+}
+
+.g-launchButton {
+  flex: 0 1 150px;
+  width: 150px;
+  padding: 15px 0px;
+  margin-top: 5px;
+  color: white;
+  opacity: 0.75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: nth($blues, 5);
+  &:hover {
+    opacity: 1;
+  }
+
+  @include mobile {
+    flex: 1 1 100%;
+    padding: 10px;
+    margin-left: 0;
+  }
+}
+
+form.party-select {
+  padding-bottom: 10px;
+
+  label {
+    margin-left: 2.5px;
+    margin-right: 10px;
+  }
+}
+
+
+form.policy-select {
+  font-size: 12px;
+}
+
+
+.mapboxgl-ctrl-geocoder.mapboxgl-ctrl {
+  box-shadow: none;
+  border: 1px solid #ddd;
+}

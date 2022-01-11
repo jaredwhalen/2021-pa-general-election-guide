@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "state": "Pennsylvania",
+    "backgroundImage": "https://www.gannett-cdn.com/presto/2021/09/13/NBCC/650a7ff3-62b0-4f0c-a7a9-ac7c487ea93a-thumbnail_2000x1333_voting_background_2021_b.jpg",
+    "displayTitle": "Pennsylvania Voters Guide",
+    "intro": "Across the state, voters head to the polls Nov. 2 to cast their votes for school directors, township supervisors, borough council members, mayors and a host of other municipal, county and state offices. To help you prepare to cast your vote, USA Today’s Pennsylvania Network polled candidates in contested races for state, county and local offices. Find out more about these candidates and where they stand on the issues in this Voters Guide.\nOnce again, mail-in ballots are expected to drive up participation for what’s normally a low turnout municipal election. Mail-in and absentee ballots must be received by your county’s Board of Elections by the time polls close at 8 p.m. Nov. 2; unlike in 2020, an extension has not been granted. In-person polls are open 7 a.m. to 8 p.m.; if you are in line at 8 p.m., you are entitled to cast your vote. If you received a mail-in ballot but choose to vote in person, bring your ballot and envelope to the polls, where you can vote. If you applied for a mail-in ballot but didn’t receive one, you can still vote in person at the polls, by provisional ballot.",
+    "dataPolicy": "By checking this box, I understand that USA Today’s network of Pennsylvania news organizations will not save my address or political affiliation and will only use this information to identify the candidates I am eligible to vote for.",
+    "candidateResponseDisclaimer": "USA Today’s Pennsylvania Network sent a policy questionnaire to all primary candidates. The following responses are directly from the candidates. If you are a candidate and believe you did not receive a questionnaire or have a question about this guide, please contact us at <a target=\"_blank\" class='g-link' href=\"mailto:cdebree@gannett.com\">cdebree@gannett.com</a>."
+  },
+  "credits": [{
+    "type": "Project_Coordinators",
+    "value": "Crissa Shoemaker DeBree, Teresa Boeckel, Amber South and Chrissy Suttles"
+  }, {
+    "type": "Development",
+    "value": "Jared Whalen"
+  }]
+}

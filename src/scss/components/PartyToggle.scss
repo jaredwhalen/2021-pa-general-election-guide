@@ -1,0 +1,26 @@
+@import '../newsjournal-styles/values.scss';
+
+.partyToggle-container {
+  font-style: italic;
+  font-weight: bold;
+  cursor: pointer;
+  @extend .padding-top-2;
+  @extend .padding-bottom-2;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  span {
+    text-transform: capitalize;
+  }
+
+  &.democratic span {
+    color: $democratic;
+  }
+
+  &.republican span {
+    color: $republican;
+  }
+}

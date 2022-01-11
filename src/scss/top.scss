@@ -1,0 +1,138 @@
+
+.headerIntroNoImage {
+  align-items: center;
+  position: relative;
+  width: auto;
+  height: auto;
+  @include display-flex;
+  padding: 80px 8% 0;
+  justify-content: center;
+  @include tablet {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 45px 15px 0;
+  }
+  @include mobile {
+    padding: 45px 15px 0;
+  };
+
+  .headerSectionNoImage {
+    @include display-flex;
+    @include flex(0 1 auto);
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+    margin: 0 auto;
+    max-width: 700px;
+    @include mobile {
+      padding: 5px 0 8px;
+    }
+
+    .overlayText {
+      position: relative;
+      text-align: center;
+      color: #222;
+      font-family: $dnj-sans;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -1px;
+      font-size: 45px;
+      margin: 0;
+
+      #g-subhead {
+
+      }
+
+    }
+
+    .headDisplay {
+      display: block;
+      position: relative;
+      margin: 10px 0 50px;
+      @include mobile {
+        margin: 0 0 15px;
+      }
+    }
+
+    .subhead {
+      font-size: 22px;
+      padding-top: 10px;
+      @include mobile {
+        font-size: 18px;
+      };
+    }
+
+
+
+    .dateline {
+      font-family: $dnj-sans;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 14px;
+      margin: 6px 0 5px;
+      padding: 2px 10px;
+      position: relative;
+      color: #999;
+      font-weight: 400;
+      @include mobile {
+        padding-top: 30px;
+      }
+    }
+  }
+}
+
+.pub {
+  font-family: $dnj-sans;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  position: relative;
+  color: #222;
+
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 14px;
+
+  .byline {
+
+  }
+
+  .pubdate {
+    font-weight: 400;
+    color: #999;
+    margin-left: 10px;
+  }
+
+}
+
+
+.g-pod {
+  height: 30px;
+  border-radius: 15px;
+  background-color: #EDEDED;
+  color: #BBB7B7;
+  display: inline-flex;
+  // padding: 0px 15px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  overflow: hidden;
+  font-weight: normal;
+  cursor: pointer;
+  .g-pod-cell {
+    &:nth-of-type(1) {
+      padding: 15px 10px 15px 15px;
+    }
+    &:nth-of-type(2) {
+      padding: 15px 15px 15px 10px;
+    }
+    &.active {
+      background-color: #009BFF;
+      color: #D6EFFF;
+    }
+  }
+}

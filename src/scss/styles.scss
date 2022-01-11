@@ -1,0 +1,177 @@
+@import './newsjournal-styles/values.scss';
+@import './newsjournal-styles/main-modern-mini.scss';
+@import './top.scss';
+@import './profile.scss';
+@import './MainContent.scss';
+
+
+body {
+  font-family: $dnj-sans;
+  margin: 0;
+}
+
+.leaflet-control-zoom a:visited {
+  color: inherit;
+}
+
+p {
+  font: 18px/26px arial,sans-serif;
+  color: #333;
+  @include tablet {
+    font-size: 16px;
+  }
+}
+
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+footer {
+  overflow: hidden;
+  width: 100vw;
+}
+
+.accent1 {
+  font-weight: 900;
+  border-bottom: 3px solid #333;
+  padding: 2px 3px;
+}
+
+.underline {
+  display: inline-block;
+  padding-bottom: 5px;
+  border-bottom: 1px solid;
+}
+
+.level1 {
+  font-family: $dnj-serif;
+  font-size: 54px;
+  line-height: 1em;
+  font-weight: 100;
+}
+
+.level3 {
+  text-transform: uppercase;
+  color: #333;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.instructions {
+  font-family: $dnj-sans;
+  font-size: 18px;
+  color: #222;
+  font-weight: 800;
+  @extend .padding-top-2;
+  @include tablet {
+    font-size: 16px;
+  }
+}
+
+.sectionheads {
+  font-family: $dnj-sans;
+  font-size: 26px;
+  color: #888888;
+  @extend .padding-top-2;
+}
+
+.subheads {
+  font-family: $dnj-sans;
+  font-size: 18px;
+  color: #888888;
+  @extend .padding-top-2;
+  @extend .padding-bottom-1;
+}
+
+
+.About {
+  background-color: rgba(nth($yellows, 7), 0.4);
+}
+
+
+
+
+.top-nav {
+  display: flex;
+  @extend .padding-top-2;
+  .top-nav-link {
+    color: nth($blues, 5);
+    a {
+      color: inherit;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  &.active {
+    color: #666;
+  }
+  }
+  span {
+    color: #666;
+  }
+}
+
+
+.headline_text {
+  font-size: 48px;
+  font-weight: bold;
+  color: #222222;
+}
+
+.section_head {
+  font-size: 36px;
+  font-weight: bold;
+  color: #222222;
+}
+
+.subsection_head {
+  font-size: 28px;
+  font-weight: bold;
+  color: #222222;
+}
+
+.instruction_text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222222;
+}
+
+.action_text {
+  font-size: 20px;
+  font-weight: 800;
+  color: nth($blues, 5);
+}
+
+.element_head {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222222;
+}
+
+.inline_head {
+  font-size: 16px;
+  font-weight: bold;
+  color: #222222;
+}
+
+
+.inline_accent {
+  font-size: 16px;
+  font-weight: 400;
+  color: #888888;
+}
+
+.full-width-flex {
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.noshow {
+  text-decoration: none;
+}
